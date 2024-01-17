@@ -1,0 +1,18 @@
+Lecture 01
+==========
+
+Before class:
+-------------
+I received an email from the professor detailing instructions on how to prepare for the first class 
+and what work is expected of me before lecture.
+
+I've joined the Slack channel and completed the Week 01 Checkpoint.
+
+I've watched the six videos from the Week 01 YouTube playlist (Introduction to System Adminsitration)
+and went through the suggested reading material.
+
+I have signed up for AWS, and skimmed the requirements for the first HW due on the 29th.
+
+After class:
+------------
+Has not happened yet.
