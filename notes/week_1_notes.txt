@@ -15,4 +15,20 @@ I have signed up for AWS, and skimmed the requirements for the first HW due on t
 
 After class:
 ------------
-Has not happened yet.
+Important take-aways:
+ - The linux-lab was taken down before this semester started, an equivalent should be set up soon.
+ - Participation is important, and most of the class time seems to be focused on working the EC2 environment.
+   There is a brief discussion about the material on the slides, but the class does not go over them in-depth.
+ - I've already found likely groupmates for the weekly presentation topic and the CTF project, but now
+   we need to decide what topic we're going to pick, and what meetup we want to go to.
+ - System Administration is hard to define within the fields of CS/programming/operations.
+ - It also makes this class hard to teach because of it, so the final project is fairly unique and the
+   class material is incredibly broad.
+ - Sysadmins step into the role of building, planning, designing and overseeing the infrastructure of
+   a company's network and servers
+ - These systems are built upon security, scalability and simplicity
+ - It is hard/impossible to add these features retrospectively
+
+It was interesting to see how 'alias' was being applied in practical ways to start and check on EC2
+instances, and part of our HW1 is to recreate them in our own shell. I liked how you could also control
+how much information the alias would return.
