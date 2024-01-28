@@ -1,0 +1,263 @@
+Homework 1 Link:
+https://stevens.netmeister.org/615/s24-hw1.html
+
+HW#1: Setup your environment for EC2 and create an instance
+
+Notes:
+ - I cannot SSH into linux-lab since it's equivalent is still down, so I
+   am performing these setups on my Ubuntu VM.
+ - I have added installed the AWS CLI on my Ubuntu VM and added the AWS
+   alias from the course website.
+ - I've configured my AWS CLI with my access key and secret key.
+ - The default region is us-east-1 (Virginia), and the default output format
+   is JSON.
+
+===============================================================================
+
+Commands:
+
+ip-10-10-0-49# uname -a
+NetBSD ip-10-10-0-49.ec2.internal 9.1 NetBSD 9.1 (GENERIC64) #0: Sun Oct 18 19:24:30 UTC 2020  mkrepro@mkrepro.NetBSD.org:/usr/src/sys/arch/evbarm/compile/GENERIC64 evbarm
+
+-------------------------------------------------------------------------------
+
+ip-10-10-0-49# whoami
+root
+
+-------------------------------------------------------------------------------
+
+ip-10-10-0-49# date
+Thu Jan 25 01:02:15 UTC 2024
+
+-------------------------------------------------------------------------------
+
+ip-10-10-0-49# w
+ 1:03AM  up 5 mins, 1 user, load averages: 0.00, 0.03, 0.00
+USER     TTY     FROM                                        LOGIN@  IDLE WHAT
+root     pts/0   pool-173-70-135-69.nwrknj.fios.verizon.net  1:00AM     0 w 
+
+-------------------------------------------------------------------------------
+
+ip-10-10-0-49# ifconfig -a
+ena0: flags=0x8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        capabilities=80200<IP4CSUM_Tx,LRO>
+        enabled=0
+        ec_capabilities=4<JUMBO_MTU>
+        ec_enabled=0
+        address: 0a:75:a8:82:99:a7
+        media: Ethernet autoselect (10Gbase-T full-duplex)
+        status: active
+        inet6 fe80::647e:6317:28f3:220a%ena0/64 flags 0x0 scopeid 0x1
+        inet6 2600:1f18:7b9a:3000:a39f:2258:f9df:c18a/128 flags 0x0
+        inet 10.10.0.49/26 broadcast 10.10.0.63 flags 0x0
+lo0: flags=0x8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 33624
+        inet6 ::1/128 flags 0x20<NODAD>
+        inet6 fe80::1%lo0/64 flags 0x0 scopeid 0x2
+        inet 127.0.0.1/8 flags 0x0
+
+-------------------------------------------------------------------------------
+
+ip-10-10-0-49# netstat -na
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        State
+tcp        0     36  10.10.0.49.22          173.70.135.69.56014    ESTABLISHED
+tcp        0      0  *.22                   *.*                    LISTEN
+udp        0      0  127.0.0.1.123          *.*                   
+udp        0      0  10.10.0.49.123         *.*                   
+udp        0      0  *.5353                 *.*                   
+udp        0      0  *.123                  *.*                   
+udp        0      0  *.65535                *.*                   
+udp        0      0  *.68                   *.*                   
+udp        0      0  *.*                    *.*                   
+Active Internet6 connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp6       0      0  *.22                   *.*                    LISTEN
+udp6       0      0  fe80::1%lo0.123        *.*                   
+udp6       0      0  ::1.123                *.*                   
+udp6       0      0  2600:1f18:7b9a:3.123   *.*                   
+udp6       0      0  fe80::647e:6317:.123   *.*                   
+udp6       0      0  *.5353                 *.*                   
+udp6       0      0  *.123                  *.*                   
+udp6       0      0  *.65535                *.*                   
+udp6       0      0  *.546                  *.*                   
+udp6       0      0  *.*                    *.*                   
+Active UNIX domain sockets
+Address  Type   Recv-Q Send-Q    Inode     Conn     Refs  Nextref Addr
+ffff00004fe9b5d8 stream      0      0        0 ffff00004fe9b568        0        0 
+ffff00004fe9b568 stream      0      0        0 ffff00004fe9b5d8        0        0 
+ffff00004fe9b4f8 stream      0      0 ffff00004fedaeb0        0        0        0 private/scache
+ffff00004fe9b418 stream      0      0        0 ffff00004fe9b3a8        0        0 
+ffff00004fe9b3a8 stream      0      0        0 ffff00004fe9b418        0        0 
+ffff00004fe9b338 stream      0      0 ffff00004fedad60        0        0        0 private/anvil
+ffff00004fe9b2c8 stream      0      0        0 ffff00004fe9b258        0        0 
+ffff00004fe9b258 stream      0      0        0 ffff00004fe9b2c8        0        0 
+ffff00004fe9b1e8 stream      0      0 ffff00004fedac10        0        0        0 private/lmtp
+ffff00004fe9b178 stream      0      0        0 ffff00004fe9b108        0        0 
+ffff00004fe9b108 stream      0      0        0 ffff00004fe9b178        0        0 
+ffff00004fe9b098 stream      0      0 ffff00004fedaac0        0        0        0 private/virtual
+ffff00004fe9b028 stream      0      0        0 ffff00004fef6f70        0        0 
+ffff00004fef6f70 stream      0      0        0 ffff00004fe9b028        0        0 
+ffff00004fef6f00 stream      0      0 ffff00004feda970        0        0        0 private/local
+ffff00004fef6e90 stream      0      0        0 ffff00004fef6e20        0        0 
+ffff00004fef6e20 stream      0      0        0 ffff00004fef6e90        0        0 
+ffff00004fef6db0 stream      0      0 ffff00004feda820        0        0        0 private/discard
+ffff00004fef6d40 stream      0      0        0 ffff00004fef6cd0        0        0 
+ffff00004fef6cd0 stream      0      0        0 ffff00004fef6d40        0        0 
+ffff00004fef6c60 stream      0      0 ffff00004feda6d0        0        0        0 private/retry
+ffff00004fef6bf0 stream      0      0        0 ffff00004fef6b80        0        0 
+ffff00004fef6b80 stream      0      0        0 ffff00004fef6bf0        0        0 
+ffff00004fef6b10 stream      0      0 ffff00004feda580        0        0        0 private/error
+ffff00004fef6aa0 stream      0      0        0 ffff00004fef6a30        0        0 
+ffff00004fef6a30 stream      0      0        0 ffff00004fef6aa0        0        0 
+ffff00004fef69c0 stream      0      0 ffff00004feda430        0        0        0 public/showq
+ffff00004fef6950 stream      0      0        0 ffff00004fef68e0        0        0 
+ffff00004fef68e0 stream      0      0        0 ffff00004fef6950        0        0 
+ffff00004fef6870 stream      0      0 ffff00004feda2e0        0        0        0 private/relay
+ffff00004fef6800 stream      0      0        0 ffff00004fef6790        0        0 
+ffff00004fef6790 stream      0      0        0 ffff00004fef6800        0        0 
+ffff00004fef6720 stream      0      0 ffff00004feda190        0        0        0 private/smtp
+ffff00004fef66b0 stream      0      0        0 ffff00004fef6640        0        0 
+ffff00004fef6640 stream      0      0        0 ffff00004fef66b0        0        0 
+ffff00004fef65d0 stream      0      0 ffff00004feda040        0        0        0 private/proxywrite
+ffff00004fef6560 stream      0      0        0 ffff00004fef64f0        0        0 
+ffff00004fef64f0 stream      0      0        0 ffff00004fef6560        0        0 
+ffff00004fef6480 stream      0      0 ffff00004ff18eb0        0        0        0 private/proxymap
+ffff00004fef6410 stream      0      0        0 ffff00004fef63a0        0        0 
+ffff00004fef63a0 stream      0      0        0 ffff00004fef6410        0        0 
+ffff00004fef6330 stream      0      0 ffff00004ff18d60        0        0        0 public/flush
+ffff00004fef62c0 stream      0      0        0 ffff00004fef6250        0        0 
+ffff00004fef6250 stream      0      0        0 ffff00004fef62c0        0        0 
+ffff00004fef61e0 stream      0      0 ffff00004ff18c10        0        0        0 private/verify
+ffff00004fef6170 stream      0      0        0 ffff00004fef6100        0        0 
+ffff00004fef6100 stream      0      0        0 ffff00004fef6170        0        0 
+ffff00004fef6090 stream      0      0 ffff00004ff18ac0        0        0        0 private/trace
+ffff00004fef6020 stream      0      0        0 ffff000052557f68        0        0 
+ffff000052557f68 stream      0      0        0 ffff00004fef6020        0        0 
+ffff000052557ef8 stream      0      0 ffff00004ff18970        0        0        0 private/defer
+ffff000052557e88 stream      0      0        0 ffff000052557e18        0        0 
+ffff000052557e18 stream      0      0        0 ffff000052557e88        0        0 
+ffff000052557da8 stream      0      0 ffff00004ff18820        0        0        0 private/bounce
+ffff000052557d38 stream      0      0        0 ffff0000525575c8        0        0 
+ffff0000525575c8 stream      0      0        0 ffff000052557d38        0        0 
+ffff000052557558 stream      0      0 ffff00004ff186d0        0        0        0 private/rewrite
+ffff0000525574e8 stream      0      0        0 ffff0000525578d8        0        0 
+ffff0000525578d8 stream      0      0        0 ffff0000525574e8        0        0 
+ffff00005bd5b160 stream      0      0 ffff00004ff18580        0        0        0 private/tlsmgr
+ffff000052557a28 stream      0      0        0 ffff000052557a98        0        0 
+ffff000052557a98 stream      0      0        0 ffff000052557a28        0        0 
+ffff000052557868 stream      0      0 ffff00004ff18430        0        0        0 public/qmgr
+ffff000052557948 stream      0      0        0 ffff000052557788        0        0 
+ffff000052557788 stream      0      0        0 ffff000052557948        0        0 
+ffff00005bd5bb00 stream      0      0 ffff00004ff182e0        0        0        0 public/cleanup
+ffff00005bd5b630 stream      0      0        0 ffff000052557718        0        0 
+ffff000052557718 stream      0      0        0 ffff00005bd5b630        0        0 
+ffff0000525577f8 stream      0      0 ffff00004ff18190        0        0        0 public/pickup
+ffff00005ce5c078 stream      0      0 ffff00005bc6f430        0        0        0 /var/run/mdnsd/mdnsd
+ffff00005ce5cd28 stream      0      0 ffff00005cad4040        0        0        0 /var/run/dhcpcd.sock
+ffff00005ce5c0e8 stream      0      0 ffff00005cad4190        0        0        0 /var/run/dhcpcd.unpriv.sock
+ffff00005ce5c008 stream      0      0        0        0        0        0 
+ffff00005bd5ba90 dgram       0      0        0 ffff00005ce5c5b8        0 ffff00005bd5b240 -> /var/run/log
+ffff00005ce5cee8 dgram       0      0        0 ffff00005ce5c5b8        0 ffff000052557cc8 -> /var/run/log
+ffff000052557cc8 dgram       0      0        0 ffff00005ce5c5b8        0 ffff00005ce5c628 -> /var/run/log
+ffff00005bd5b940 dgram       0      0        0        0        0        0 
+ffff00005bd5b240 dgram       0      0        0 ffff00005ce5c5b8        0 ffff00005ce5cee8 -> /var/run/log
+ffff00005ce5c628 dgram       0      0        0 ffff00005ce5c5b8        0 ffff00005bd5b1d0 -> /var/run/log
+ffff00005bd5b1d0 dgram       0      0        0 ffff00005ce5c5b8        0 ffff00005bd5b7f0 -> /var/run/log
+ffff00005ce5c1c8 dgram       0      0        0 ffff00005ce5c5b8        0        0 -> /var/run/log
+ffff00005bd5b7f0 dgram       0      0        0 ffff00005ce5c5b8        0 ffff00005ce5c1c8 -> /var/run/log
+ffff00005ce5c5b8 dgram       0      0 ffff00005b770190        0 ffff00005bd5ba90        0 /var/run/log
+
+-------------------------------------------------------------------------------
+
+(display partition table)
+
+ip-10-10-0-49# fdisk
+fdisk: Cannot determine the number of heads
+Disk: /dev/rld4
+NetBSD disklabel disk geometry:
+cylinders: 5201, heads: 64, sectors/track: 63 (4032 sectors/cylinder)
+total sectors: 20971520, bytes/sector: 512
+
+BIOS disk geometry:
+cylinders: 1023, heads: 255, sectors/track: 63 (16065 sectors/cylinder)
+total sectors: 20971520
+
+Partitions aligned to 2048 sector boundaries, offset 63
+
+Partition table:
+0: Primary DOS with 32 bit FAT - LBA (sysid 12)
+    start 32768, size 163840 (80 MB, Cyls 2/10/9-12/60/48), Active
+1: NetBSD (sysid 169)
+    start 196608, size 20774912 (10144 MB, Cyls 12/60/49-1305/106/17)
+        PBR is not bootable: All bytes are identical (0x00)
+2: <UNUSED>
+3: <UNUSED>
+First active partition: 0
+Drive serial number: 0 (0x00000000)
+
+-------------------------------------------------------------------------------
+
+(display currently mounted filesystems)
+
+ip-10-10-0-49# mount
+/dev/ld4a on / type ffs (noatime, local)
+/dev/ld4e on /boot type msdos (local)
+kernfs on /kern type kernfs (local)
+ptyfs on /dev/pts type ptyfs (local)
+procfs on /proc type procfs (local)
+tmpfs on /var/shm type tmpfs (local)
+
+-------------------------------------------------------------------------------
+
+(display disk space)
+
+ip-10-10-0-49# df
+Filesystem    1K-blocks       Used      Avail %Cap Mounted on
+/dev/ld4a      10217144    1012712    8693576  10% /
+/dev/ld4e         81820      20152      61668  24% /boot
+kernfs                1          1          0 100% /kern
+ptyfs                 1          1          0 100% /dev/pts
+procfs                4          4          0 100% /proc
+tmpfs            116488          0     116488   0% /var/shm
+
+-------------------------------------------------------------------------------
+
+(use up all available space)
+
+dd if=/dev/zero of=file bs=1024 count=1096*1096*64
+
+To accomplish filling up the space, I used the "df" command to see how much
+space was available, and then used the command above to fill up the space.
+Even though I only had 10GB of space, I had the command to go way higher than
+that. The terminal eventually returned that there was no space left on the device.
+However, NetBSD still worked fine, and "df" returned that there was negative space.
+Amazon has some sort of protection against overfilling the disk by storing the 
+data in a different location. Obviously, no more new files can be made.
+
+ip-10-10-0-49# df
+Filesystem    1K-blocks       Used      Avail %Cap Mounted on
+/dev/ld4a      10217144   10217072    -510784 105% /
+/dev/ld4e         81820      20152      61668  24% /boot
+kernfs                1          1          0 100% /kern
+ptyfs                 1          1          0 100% /dev/pts
+procfs                4          4          0 100% /proc
+tmpfs            116488          0     116488   0% /var/shm
+
+-------------------------------------------------------------------------------
+
+(use up all available inodes)
+
+for i in `seq 0 116493`
+do
+  touch "$i"
+done
+
+I reset the netBSD instance to get rid of the files I created in the previous
+step. I then used the "df -i" command to see how many inodes were available.
+Since inodes are used to store information about files, the "touch" command
+could be used to create a bunch of empty files to fill up the inodes. Vi was
+used to create a script to create the files, since it was the only one available
+on the AWS instance. The script took awhile to run, but eventually it filled
+up all the inodes. I had a similar error to the one above, where the terminal
+returned that there was no space left on the device. However, NetBSD still
+functioned fine, and just like above, I could not create any new files.

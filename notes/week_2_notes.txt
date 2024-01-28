@@ -1,0 +1,17 @@
+Lecture 02
+==========
+
+Before class:
+-------------
+I've watched the Week 2 YouTube playlist and skimmed the File Systems and Storage Models
+reading material.
+
+I've finished HW1 and created another folder in this repo documentating my work. I've also
+sent an email to the professor to my GitHub repo.
+
+Question: How are the number of inodes calculated on a given file system? Is it a fixed
+number or is it calculated based on the size of the file system?
+
+After class:
+------------
+Has not happened yet.
