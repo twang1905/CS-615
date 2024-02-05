@@ -1,0 +1,14 @@
+Lecture 03
+==========
+
+Before class:
+-------------
+I've watched the Week 3 YouTube playlist and took a look at the CS631 APUE Lectures on
+the Unix Filesystem. The readings are the same from last week, so I just briefly skimmed
+through them.
+
+I've finished the Week 03 Checkpoint.
+
+After class:
+------------
+Has not happened yet.

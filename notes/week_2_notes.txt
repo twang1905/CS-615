@@ -14,4 +14,28 @@ number or is it calculated based on the size of the file system?
 
 After class:
 ------------
-Has not happened yet.
+Important take-aways:
+ - Storage Models
+    - Direct Attached Storage (DAS)
+    - Network Attached Storage (NAS)
+    - Storage Area Network (SAN)
+    - Cloud Storage
+ - Device Interfaces
+    - SCSI
+    - SATA
+    - SSD
+ - Storage Protocols
+    - ATA over Ethernet (AoE)
+    - Fibre Channel over Ethernet (FCoE)
+    - *oE
+    - Serial Attached SCSI (SAS)
+ - Disk Device Confiuration
+    - Single Disk
+    - JBOD (Just a Bunch of Disks)
+    - RAID
+
+I enjoyed the class talking about their experiences with the first homework. The class came
+both similar and different conclusions about the homework. For an example, everyone agreed
+that it took an enourmous amount of time for the inodes to be used. Also, some people had
+different solutions on how to use all the inodes. I hope homework 2 has the same amount of
+varibility in solutions.
