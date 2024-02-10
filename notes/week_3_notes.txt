@@ -11,4 +11,25 @@ I've finished the Week 03 Checkpoint.
 
 After class:
 ------------
-Has not happened yet.
+Important take-aways:
+ - Booting up a web server
+    - The order of kernels that boot are the physical host and the virtual host
+    - First stage and second stage boot loaders are used to boot the kernels
+    - First stage usually hands off to second stage
+    - Kernel initializes the hardware on the web server
+ - File systems
+    - Types of file systems
+        - FAT32
+        - NTFS
+        - ext2, ext3, ext4
+        - HFS+
+        - ZFS
+        - BTRFS
+    - Types of Files
+        - Regular files
+        - Directories
+        - Sockets
+        - Links
+    - Use case of RAM
+        - Temporary
+        - Faster than hardware
