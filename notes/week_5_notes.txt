@@ -1,0 +1,21 @@
+Lecture 05
+==========
+
+Before class:
+-------------
+I've watched the Week 5 YouTube playlist and read the blog post titled "WHOIS: Fragile, unparseable, 
+obsolete... and universally relied upon." The WHOIS dilemma reminds me of the same problem with
+COBOL, where the language is still in use, but it's old age makes it difficult to maintain and
+understand. It even has the same problems as WHOIS, where the language is very readable for humans,
+but the lack of structure has made it difficult to maintain and understand.
+
+I've finished the Week 05 Checkpoint.
+
+Homework #2 is due this Wednesday, and has taken over the spot of the old Homework #2 (now Homework #3).
+I've finished it, and sent a professor a .tar file of the specifications listed on the course website.
+I've detailed more of the process in the Homework #2 README file, but the huge RPM packaging guide made
+this homework more complicated than I expected to.
+
+After class:
+------------
+Has not happened yet.

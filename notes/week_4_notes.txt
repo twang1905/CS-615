@@ -13,4 +13,47 @@ There was still no homework this week, so I've spent some time doing the exercis
 
 After class:
 ------------
-Has not happened yet.
+Important take-aways:
+ - Software is software, even when its firmware or middleware
+ - Software can be grouped into:
+    - "Low-level" / firmware
+    - "OS"
+    - "Add-on software"
+        - The difference between add-on software and OS software is not always clear
+ - Firmware
+    - Bits of software executing early on
+    - Less flexbility, less "soft"
+ - Kernel
+    - Different types of OS kernels: microkernels and monolithic kernels
+    - Needs a more useful environment to do its purpose (the OS)
+    - The "motor" of the car
+ - Operating System
+    - Bits and pieces not running in kernel space, but necessary for the system to run
+    - OS needs to be tightly integrated with kernel
+ - System Software
+    - Additional functionality, but is involved in how to operate the system and how to interact with it
+    - Core components of the OS and bits that influence their behavior
+ - OS Installation Process
+    - Power the system
+	- No bootloader, need alternate media (boot device)
+	- Identify root device and optional additional disks
+	- Create partition table
+	- Create filesystems
+	- Install MBR, bootlocks, etc.
+	- Fetch OS software (HTTPS, iSCSI)
+	- Install / Copy / Extract OS
+	- Optional add-on application software
+	- Perform basic system configuration
+    - Reboot
+ - Package Management
+    - Easy and scalable installation of software
+	- Automatic resolution of software dependencies
+	- Package and file inventory
+	- Package and file integrity checks 
+    - Vulnerability checks
+
+After going through the week 4 material in class, half the class was the traditional lecture focusing on the
+multiuser funamentals. I'm currently studying for a cybersecurity cert, so I was already familiar with some
+terms listed on the slides, like Zero Trust. However, this lecture went deeper on the implications on the 
+implementation of these concepts on the user level. I've learned a lot about how users will still try and mess
+with the multi-user system, and how to mitigate these risks. 
