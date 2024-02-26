@@ -18,4 +18,33 @@ this homework more complicated than I expected to.
 
 After class:
 ------------
-Has not happened yet.
+Important take-aways:
+ - IPv4
+    - 32-bit address
+    - 4 groups of 8 bits
+    - Running out of addresses
+ - IPv6
+    - 128-bit address
+    - 8 groups of 4 hex digits
+    - Zeroes are compressed, only once
+    - 2^128 addresses
+    - Every user is assigned a /64
+    - Header is larger, but simpler
+ - netmask
+    - Allows for subnetting
+    - Splits a network into smaller networks
+    - Splits IPv4 address into network and host
+    - Entire address space is /32
+    - Example: /24 is
+        - Host bits: 8
+        - Network bits: 24
+        - 2^8 = 256
+        - 256 - 2 = 254
+        - 254 hosts
+
+We spent a portion of the class talking about Homework 2. Unsurprisingly, the class had a lot of trouble
+completing the homework. The class discussed talking points on what was difficult about the homework, and
+we narrowed the points down to rpmbuild, file permissions, source package vs binary package, macros, and
+the 615 user creation. Out of these points, I struggled with macros the most personally, since they were
+causing a lot of issues with the build directory not being found. People also highlighted their troubles
+working with the .spec file, as creating a RPM package like this was a new experience for all of us.
