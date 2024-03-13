@@ -1,4 +1,4 @@
-Lecture 05
+Lecture 07
 ==========
 
 Before class:
@@ -10,4 +10,29 @@ I've completed the Week 7 checkpoint.
 
 After class:
 -------------
-Has not happened yet.
+ - How do you remember each system's IP address?
+ - Domain name space consists of a tree of domain names
+  - Starts with "." at the root
+  - Tree is sub-divided into zones consisting of domains and sub-domains
+  - Domains under the root are Top Level Domains (TLDs)
+  - Can be divided further
+  - Authority over a zone may be delegated
+  - A Fully Qualified Domain Name ends in "."
+ - General purpose domains
+  - .com: commercial
+  - .edu: education
+  - .gov: government
+  - .mil: military
+  - .org any other organization
+  - .arpa: "temporary" use by ARPA
+  - country codes
+ - Layer 9
+  - Registries may function as a Domain Name registrar or may delegate Domain Name registration
+  - If you control one node, you control the branches underneath
+ - A simple lookup
+  - DNS server is non-authoritative
+  - Resolves by asking other servers
+   - Authoritative name server provides answers
+   - Resolver relays answers it determined by asking authoritative name servers
+   - Example asks the root where a domain is
+   - Slowly go down the domain tree to figure it out through DNS
