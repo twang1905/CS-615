@@ -10,3 +10,22 @@ I've completed the Week 8 checkpoint.
 
 After class:
 -------------
+ - Email utilizes a simple text based protocol, SMTP (simple mail transfer protocol)
+ - Mail System
+    - Mail User Agent (MUA)
+       - example: Outlook, mutt
+       - the program that you use to read your email and to compose your emails
+	   - command line, mail programs, or browsers
+	- Mail is sent to Mail Transfer Agent (MTA)
+	   - example: postfix, sendmail, qmail
+	   - There is an outgoing and ingoing MTA
+	- MTA hands off to Mail Delivery Agent (MDA)
+	   - example: procmail
+	- Mail server is not directly accessible to user, an access agent is used
+       - Allows remote access via a separate protocol, like POP or IMAP
+
+At the beginning of class, we discussed the challenges and findings of homework 4. 
+It was probably the most straightforward homework assignment so far, so there weren't
+many questions about troubleshooting the DNS server and client. The class mostly
+discussed our findings in the server tcpdump, like the order that the requests came in
+due to DNSSEC and seeing what packets came first in the server's tcpdump.
