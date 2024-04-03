@@ -1,0 +1,16 @@
+Lecture 11
+==========
+
+Before class:
+-------------
+I've watched the Week 11 Youtube playlist about configuration management, 
+and I've checked out the blog post about it in the Week 11 block. 
+
+I've completed the Week 10 checkpoint and the 6th homework.
+
+Unfortunately, the AWS meetup has been cancelled, so I'm still looking for
+a replacement event to attend.
+
+After class:
+-------------
+Has not happened yet.
