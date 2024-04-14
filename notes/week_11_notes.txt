@@ -6,11 +6,20 @@ Before class:
 I've watched the Week 11 Youtube playlist about configuration management, 
 and I've checked out the blog post about it in the Week 11 block. 
 
-I've completed the Week 10 checkpoint and the 6th homework.
+I've completed the Week 11 checkpoint and the 6th homework.
 
 Unfortunately, the AWS meetup has been cancelled, so I'm still looking for
 a replacement event to attend.
 
 After class:
 -------------
-Has not happened yet.
+At the beginning of class, we discussed the issues and technical details for
+the 6th homework. One universal observation was that the distros used for the
+homework was extremely finicky, and most of them had to be hard coded in some
+way. One issue that compounded on this problem was that it was hard to debug
+the script because the script was running on a remote machine, and all we had
+to go on was the output of the script. There's obviously no debugging functions
+on a text editor, so bugs had to be solved by going through the code line-by-line.
+People also had issues with logging occurring locally, but not remotely. We
+discussed in the class lecture about this point further, and how the logging 
+worked between the two machines.
