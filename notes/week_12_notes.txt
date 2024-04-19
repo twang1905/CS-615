@@ -14,4 +14,22 @@ on the 18th of April.
 
 After class:
 -------------
-Has not happened yet.
+The 6th homework was graded, so we could discuss all the issues that our
+scripts had running. One of the biggest issues that came up in grading was
+that #/bin/bash didn't work on FreeBSD and NetBSD. Even though it ran on
+my system, most people (including myself) assumed that bash would be on
+all systems. It didn't cross my mind to change the script off of bash
+since I've never had to change it before in the past. I'll make sure to
+test other alternatives like #/bin/sh in the future. Another problem
+that grading encountered was the installation of rsyslog. The scripts
+had to be fully automated, so pressing 'y' to install rsyslog was
+obviously goes against this. The solution was easy, just add -y to the
+apt-get install command. I implemented this change early on when I was
+testing, mostly because I got tired myself of pressing 'y' every time.
+The last issue that came up was the use of the how some scripts kept
+impending on /etc/syslog.conf and /etc/rsyslog.conf. People used '>>'
+to append to the files, but this would cause the script to append the
+same line over and over again. Some people used '>', but this overwrote
+the file. The common solution was to create your own .conf file exclusively
+for the script. This way, the script could append to the file without
+interfering with the system's configuration.
