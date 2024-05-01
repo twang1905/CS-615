@@ -13,8 +13,8 @@ spring break.
 After class:
 -------------
 Our class discussed the issues and findings we had with homework 3. One of the observations that
-we made was that depsite the geolocations for IPv6 being less developed than those for IPv4, the
-routing for IPv6 was actually more efficient than that for IPv4. Speaking of geolocation, we
+we made was that despite the geolocations for IPv6 being less developed than those for IPv4, the
+routing for IPv6 was more efficient than that for IPv4. Speaking of geolocation, we
 discussed the fact that since geolocation is based on voluntary reporting, it's not always accurate.
 
 There was also Elena's presentation about the claims and debunks about the security of Linus versus
@@ -22,4 +22,4 @@ the security of Windows. The main takeaway was that the security of an operating
 inherently tied to the number of vulnerabilities that are found in it. Instead, the main issue lies
 in user error. There's also the pitfall that the more popular an operating system is, the more
 vulnerabilities will be found in it. Jokingly, Elena concluded that the best way to make Linux more
-secure is to dissaude people from using it.
+secure is to dissuade people from using it.

@@ -8,7 +8,7 @@ and what work is expected of me before lecture.
 
 I've joined the Slack channel and completed the Week 01 Checkpoint.
 
-I've watched the six videos from the Week 01 YouTube playlist (Introduction to System Adminsitration)
+I've watched the six videos from the Week 01 YouTube playlist (Introduction to System Administration)
 and went through the suggested reading material.
 
 I have signed up for AWS, and skimmed the requirements for the first HW due on the 29th.
@@ -17,12 +17,12 @@ After class:
 ------------
 Important take-aways:
  - The linux-lab was taken down before this semester started, an equivalent should be set up soon.
- - Participation is important, and most of the class time seems to be focused on working the EC2 environment.
+ - Participation is important, and most of the class time seems to be focused on working in the EC2 environment.
    There is a brief discussion about the material on the slides, but the class does not go over them in-depth.
  - I've already found likely groupmates for the weekly presentation topic and the CTF project, but now
    we need to decide what topic we're going to pick, and what meetup we want to go to.
  - System Administration is hard to define within the fields of CS/programming/operations.
- - It also makes this class hard to teach because of it, so the final project is fairly unique and the
+ - It also makes this class hard to teach because of it, so the final project is unique and the
    class material is incredibly broad.
  - Sysadmins step into the role of building, planning, designing and overseeing the infrastructure of
    a company's network and servers

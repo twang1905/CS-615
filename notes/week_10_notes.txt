@@ -6,7 +6,7 @@ Before class:
 I've watched the Week 10 Youtube playlist about backups, and I've checked out
 some of the blog posts linked in the Week 10 block. I noticed that some of
 the material goes of syslog, which is an important component of homework 6.
-I'll probably be going to back to this material while I'm doing the assignment.
+I'll probably be going back to this material while I'm doing the assignment.
 
 I've completed the Week 10 checkpoint.
 
@@ -19,7 +19,7 @@ After class:
 -------------
 This class had an interesting turn of events, as the xz backdoor exploit was
 discovered on the Saturday before class. I was able to find a blog post about
-the exploit, and read up on it before class. Essentially, someone had slowly
+the exploit and read up on it before class. Essentially, someone had slowly
 been committing to XZ Utils, and eventually became a trusted contributor. They
 slowly added backdoor code which would allow them to bypass auth for SSH logins
 by manipulating the sshd config file. The vulnerability was discovered by a
@@ -29,5 +29,5 @@ running slowly, and narrowed it down to sshd and a couple of odd valgrind
 errors. Also, this was right before Debian and Red Hat were going to push their
 next releases, so they were able to catch the exploit before it was released.
 In class, we talked about the exploit further in depth, and how it was able to
-manipulated the systems surronding sshd and OpenSSH to accomplish creating the
+manipulated the systems surrounding sshd and OpenSSH to accomplish creating the
 backdoor.

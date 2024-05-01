@@ -11,10 +11,10 @@ I've completed the Week 9 checkpoint and homework 5.
 
 After class:
 -------------
-The class discussion was pretty brief, as the homework wasn't too involved at all.
+The class discussion was brief, as the homework wasn't too involved at all.
 The main thing we noticed was that SMTP didn't require any form of verification,
 so it was possible to send emails from any address. This is a pretty big security
 flaw, but we discussed using protocols like POP3 and IMAP to somewhat mitigate
-this issue. STARTTLS came up as a way to provide confidentiality and integrity,
+this issue. STARTTLS came up to provide confidentiality and integrity,
 but it lacked authentication. The issue of other IP addresses being blocklisted
 by SpamHaus seemed to be an issue exclusive to me, which was pretty strange.

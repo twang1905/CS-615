@@ -6,7 +6,7 @@ Before class:
 I've watched the Week 2 YouTube playlist and skimmed the File Systems and Storage Models
 reading material.
 
-I've finished HW1 and created another folder in this repo documentating my work. I've also
+I've finished HW1 and created another folder in this repo documenting my work. I've also
 sent an email to the professor to my GitHub repo.
 
 Question: How are the number of inodes calculated on a given file system? Is it a fixed
@@ -36,6 +36,6 @@ Important take-aways:
 
 I enjoyed the class talking about their experiences with the first homework. The class came
 both similar and different conclusions about the homework. For an example, everyone agreed
-that it took an enourmous amount of time for the inodes to be used. Also, some people had
+that it took an enormous amount of time for the inodes to be used. Also, some people had
 different solutions on how to use all the inodes. I hope homework 2 has the same amount of
-varibility in solutions.
+variability in solutions.

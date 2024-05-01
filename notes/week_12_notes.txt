@@ -25,11 +25,11 @@ that grading encountered was the installation of rsyslog. The scripts
 had to be fully automated, so pressing 'y' to install rsyslog was
 obviously goes against this. The solution was easy, just add -y to the
 apt-get install command. I implemented this change early on when I was
-testing, mostly because I got tired myself of pressing 'y' every time.
+testing, mostly because I got tired of pressing 'y' every time.
 The last issue that came up was the use of the how some scripts kept
 impending on /etc/syslog.conf and /etc/rsyslog.conf. People used '>>'
 to append to the files, but this would cause the script to append the
-same line over and over again. Some people used '>', but this overwrote
+same line repeatedly. Some people used '>', but this overwrote
 the file. The common solution was to create your own .conf file exclusively
 for the script. This way, the script could append to the file without
 interfering with the system's configuration.

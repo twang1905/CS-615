@@ -15,20 +15,20 @@ We had three presentations this week, and all of them were about various aspects
 cybersecurity. The topics were about AirTags being used maliciously, exploring 
 vulnerabilities through social engineering, and understanding the dynamics of 
 Distributed Denial of Service (DDoS) attacks. I found the AirTags presentation to be
-the most interesting, as I never knew how they worked. They broadbast a public key
+the most interesting, as I never knew how they worked. They broadcast a public key
 over BlueTooth that can be picked up by other devices, and then the location data is
 sent to the owner of the AirTag through Apple's servers. I already knew about issues
 concerning AirTags being used for stalking, but I didn't know the solutions in
 development were extremely intricate. Essentially, a combination of tracking the
-movement, how much the public indentifier is used, and how often the AirTag is
+movement, how much the public identifier is used, and how often the AirTag is
 detected by other devices can be used to determine if the AirTag is being used
 maliciously.
 
 For the class discussion, we went over ethics and social responsibility. It's
 extremely hard to defuse ethical dilemmas, as there are many factors to consider
 like legal != ethical, and having to sometimes choose an unethical option to
-keep your job. There are many code of ethics created by various organizations
-like the ACM, IEEE, and ISACA in order to help guide us in the right directon.
+keep your job. There are many codes of ethics created by various organizations
+like the ACM, IEEE, and ISACA to help guide us in the right direction.
 However, it's ultimately up to the individual to make the right decision and to
 act in the public interest. 
 
